@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 
 /**
  * _printf - printf function
@@ -8,10 +9,9 @@
 
 int _printf(const char *format, ...)
 {
-	int (*pfunc)(va_list, flags_t *);
+	int (*pfunc)(va_list, ... *);
 	const char *p;
 	va_list arguments;
-	flags_t flags = {0, 0, 0};
 
 	register int count = 0;
 
